@@ -15,7 +15,7 @@ function MyApp() {
   return (
     <>
 
-    <HomePage></HomePage>
+    <Submit></Submit>
     
     </>
   )
