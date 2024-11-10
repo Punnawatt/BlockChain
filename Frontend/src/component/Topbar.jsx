@@ -72,6 +72,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 //import { usePathname, useRouter } from 'next/navigation';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function TopBar() {
   //const router = useRouter();
@@ -89,7 +91,9 @@ export default function TopBar() {
   const handleNavtoHome = () =>{
     // back to home
     //router.push(`GGrader/home`);
-    alert("Go to Home")
+    //alert("Go to Home")
+    //<Link to={'/HomePage'}>Home</Link>
+    //navigate('/HomePage'); // Navigate to the Home page
     setAnchorElNav(null);
   }
 
@@ -120,8 +124,13 @@ export default function TopBar() {
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu} // Closes the menu
           >
-            <MenuItem onClick={handleNavtoHome}>Home</MenuItem>
-            <MenuItem onClick={handleNavtoProblemCreatePage}>Create New Problem</MenuItem>
+            <MenuItem onClick={handleNavtoHome}>
+            <Link to="/HomePage" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link>
+            </MenuItem>
+            <MenuItem onClick={handleNavtoProblemCreatePage}>
+            <Link to="/CreateProblem" style={{ textDecoration: 'none', color: 'inherit' }}>Create New Problem</Link>
+            </MenuItem>
+            
             
           </Menu>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

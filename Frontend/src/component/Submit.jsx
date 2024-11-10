@@ -3,11 +3,13 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Form } from "react-router-dom";
 
 export default function Submit() {
   const [details, setDetails] = useState('');
 
   return (
+    <Form method="post" action="/">
     <Box
       sx={{
         width: '100vw',          // Set width to 100% of the viewport width
@@ -50,5 +52,6 @@ export default function Submit() {
         Submit
       </Button>
     </Box>
+    </Form>
   );
 }
