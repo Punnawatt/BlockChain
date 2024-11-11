@@ -7,7 +7,8 @@ import About from './component/About.jsx';
 import HomePage from './module/HomePage/page.jsx';
 import CreateProblem from './module/CreateProblem/page.jsx';
 import SubmitCode from './module/SubmitCode/page.jsx';
-
+import Grader from './module/Grader/page.jsx';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: "SubmitCode",
     element: <SubmitCode/>,
   },
+  {
+    path: "grader",
+    element: <Grader />
+  }
   // Add more routes here as needed
 ]);
 
