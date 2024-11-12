@@ -12,19 +12,12 @@ const CustomCard = () => {
         <Card 
             variant="outlined" 
             sx={{
-                // display: 'flex',
-                // flexDirection: 'row',
-                // alignItems: 'center',
-                // borderColor: '#b30000', // Red border
-                // padding: 2,
-                // maxWidth: 400,
-                // backgroundColor: '#fbe9e7', // Light background color
-                // boxShadow: '3px 3px 5px #4e342e',
+                
                 display: 'flex',
                 flexDirection: 'row',
                 height: 150,
                 width: 1000,
-                margin: 10,
+                margin: 1,
                 boxShadow: '8px 8px #472F05',
                 backgroundColor: '#F3DDD1',
                 borderRadius: 0,
@@ -51,9 +44,6 @@ const CustomCard = () => {
                 </Box>
             </CardContent>
 
-            {/* Divider */}
-            {/* <Divider orientation="vertical" flexItem 
-            sx={{ borderColor: '#b30000', marginLeft: 2, marginRight: 15 }} /> */}
 
             {/* Right Column */}
             <Box display="flex" flexDirection="row" gap={1}>
