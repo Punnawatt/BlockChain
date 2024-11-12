@@ -14,14 +14,14 @@
 // //       method: 'DELETE'
 // //     }).then(() => {
 // //       history.push('/');
-// //     }) 
+// //     })
 // //   }
 //     const handleClick = () => {
 //     fetch('http://localhost:3000/problems/' + problem.id, {
 //       method: 'DELETE'
 //     }).then(() => {
 //       history.push('/');
-//     }) 
+//     })
 //   }
 
 //   return (
@@ -52,5 +52,5 @@
 //     </div>
 //   );
 // }
- 
+
 // export default ProblemDetail;

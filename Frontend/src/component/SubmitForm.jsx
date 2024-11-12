@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Form } from "react-router-dom";
 
 function NewEvent() {
@@ -8,9 +8,7 @@ function NewEvent() {
     //   <input type="text" name="description" />
     //   <button type="submit">Create</button>
     // </Form>
-    <div>Hello, this is the NewEvent component!
-
-    </div>
+    <div>Hello, this is the NewEvent component!</div>
   );
 }
 

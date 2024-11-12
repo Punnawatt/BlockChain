@@ -1,30 +1,27 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 //import './index.css';
 //import App from './App';
 //import Test from './Test';
-import HomePage from './module/HomePage/page';
-import Home from './module/Home/page'
-import CreateBlog from './module/CreateBlog/page'
+import HomePage from "./module/HomePage/page";
+import Home from "./module/Home/page";
+import CreateBlog from "./module/CreateBlog/page";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home />,
   },
 
   {
     path: "/create",
-    element: <CreateBlog/>,
+    element: <CreateBlog />,
   },
-
-  
-  
 ]);
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
