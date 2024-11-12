@@ -1,13 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import MyApp from './MyApp.jsx';
-import Home from './component/Home.jsx';
-import About from './component/About.jsx';
+//import MyApp from './MyApp.jsx';
+
 import HomePage from './module/HomePage/page.jsx';
 import CreateProblem from './module/CreateProblem/page.jsx';
 import SubmitCode from './module/SubmitCode/page.jsx';
-
+//import ProblemDetail from './module/ProblemDetail/page.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,17 +14,23 @@ const router = createBrowserRouter([
     element: <HomePage/>,
   },
   {
-    path: "HomePage",
+    path: "/HomePage",
     element: <HomePage/>,
   },
   {
-    path: "CreateProblem",
+    path: "/CreateProblem",
     element: <CreateProblem/>,
   },
   {
-    path: "SubmitCode",
+    path: "/SubmitCode",
     element: <SubmitCode/>,
-  },
+  }
+  // {
+  //   path: "/problem/:id",
+  //   element: <ProblemDetail/>,
+  // },
+  
+  
   // Add more routes here as needed
 ]);
 
