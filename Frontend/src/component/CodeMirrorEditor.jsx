@@ -118,16 +118,10 @@ export default function CodeMirrorEditor() {
           </pre>
         </div>
         <div className="flex flex-row">
-          <button
-            onClick={runCode}
-            className="border w-20 my-4 ml-4 bg-green-400 rounded h-10"
-          >
+          <button className="border w-20 my-4 ml-4 bg-green-400 rounded h-10">
             Approve
           </button>
-          <button
-            onClick={runCode}
-            className="border w-20 my-4 ml-4 bg-red-400 rounded h-10"
-          >
+          <button className="border w-20 my-4 ml-4 bg-red-400 rounded h-10">
             Reject
           </button>
         </div>
