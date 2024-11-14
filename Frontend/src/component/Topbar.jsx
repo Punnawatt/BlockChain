@@ -66,9 +66,8 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-//import { usePathname, useRouter } from 'next/navigation';
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 
 export default function TopBar() {
   //const router = useRouter();
@@ -121,7 +120,7 @@ export default function TopBar() {
             >
               <MenuItem onClick={handleNavtoHome}>
                 <Link
-                  to="/HomePage"
+                  to="/problems"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   Home

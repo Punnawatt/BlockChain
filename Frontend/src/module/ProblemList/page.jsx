@@ -3,17 +3,7 @@ import { Card, CardContent, Typography, Button, Box } from "@mui/material";
 
 const ProblemList = ({ problems }) => {
   return (
-    // <div className="blog-list">
-    //   {blogs.map(blog => (
-    //     <div className="blog-preview" key={blog.id} >
-    //       <Link to={`/blogs/${blog.id}`}>
-    //         <h2>{ blog.title }</h2>
-    //         <p>Written by { blog.author }</p>
-    //       </Link>
-    //     </div>
-    //   ))}
-    // </div>
-
+    
     <Card
       sx={{
         width: 1500,
