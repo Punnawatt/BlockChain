@@ -1,10 +1,8 @@
-import React from 'react'
-import TopBar from '../../component/Topbar'
+import React from "react";
+import TopBar from "../../component/Topbar";
 
 function SubmitCode() {
-  return (
-    <TopBar></TopBar>
-  )
+  return <TopBar></TopBar>;
 }
 
-export default SubmitCode
+export default SubmitCode;
