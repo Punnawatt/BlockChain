@@ -111,11 +111,25 @@ export default function CodeMirrorEditor() {
             className="border m-4 p-2 rounded w-5/6 border-black"
           />
         </div>
-        <div>
+        <div className="pb-12">
           <div className="text-xl font-bold m-2">Output:</div>
           <pre className="border rounded border-black h-full m-4 w-5/6 p-2">
             {output}
           </pre>
+        </div>
+        <div className="flex flex-row">
+          <button
+            onClick={runCode}
+            className="border w-20 my-4 ml-4 bg-green-400 rounded h-10"
+          >
+            Approve
+          </button>
+          <button
+            onClick={runCode}
+            className="border w-20 my-4 ml-4 bg-red-400 rounded h-10"
+          >
+            Reject
+          </button>
         </div>
       </div>
     </div>
