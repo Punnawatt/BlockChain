@@ -165,14 +165,14 @@ export default function SubmitCode() {
             {output}
           </pre>
         </div>
-        <div className="flex flex-row">
+        {/* <div className="flex flex-row">
           <button className="border w-20 my-4 ml-4 bg-green-400 rounded h-10">
             Approve
           </button>
           <button className="border w-20 my-4 ml-4 bg-red-400 rounded h-10">
             Reject
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
     </>
