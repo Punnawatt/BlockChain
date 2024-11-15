@@ -25,10 +25,6 @@ const router = createBrowserRouter([
     element: <CreateProblem />,
   },
   {
-    path: "/SubmitCode",
-    element: <SubmitCode />,
-  },
-  {
     path: "grader",
     element: <Grader />,
   },
@@ -36,6 +32,11 @@ const router = createBrowserRouter([
     path: "/problems/:id",
     element: <ProblemDetail/>,
   },
+  {
+    path: "/problems/submit/:id",
+    element: <SubmitCode/>,
+  },
+
 
   // Add more routes here as needed
 ]);
