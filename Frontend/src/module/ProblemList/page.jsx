@@ -1,9 +1,59 @@
+// import { Link } from "react-router-dom";
+// import { Card, CardContent, Typography, Button, Box } from "@mui/material";
+// import { useNavigate } from "react-router-dom";
+// const ProblemList = ({ problems }) => {
+//   const navigate = useNavigate();
+//   const handleOnclick = () => {
+//       //<Link to = {`/problems/${problems.id}/submit`}></Link>
+//       navigate(`/problems/${problems.id}/submit`);
+//     }
+//   return (
+    
+//     <Card
+//       sx={{
+//         width: 1500,
+//         height: 100,
+//         padding: 0,
+//         flex: 1,
+//         flexDirection: "row",
+//         boxShadow: "8px 8px #472F05",
+//         backgroundColor: "#F3DDD1",
+//         borderRadius: 0,
+//         border: "3px solid #472F05",
+//         //position: 'relative',
+//       }}
+//     >
+//       {problems.map((problem) => (
+//         <CardContent
+//           sx={{
+//             padding: 2,
+//             flex: 1,
+//             boxShadow: "8px 8px #472F05",
+//             border: "3px solid #472F05",
+//           }}
+//           key={problem.id}
+//         >
+//           <Link to={`/problems/${problem.id}`}>
+//             <h2>{problem.problemName}</h2>
+//             <p>Stake amount {problem.stake}</p>
+//           </Link>
+//           <button>Delete</button>
+//           <Link to={`/problems/submit/${problem.id}`}>
+//             <button>Submit</button>
+//           </Link>
+          
+//         </CardContent>
+//       ))}
+//     </Card>
+//   );
+// };
+
+// export default ProblemList;
 import { Link } from "react-router-dom";
 import { Card, CardContent, Typography, Button, Box } from "@mui/material";
 
 const ProblemList = ({ problems }) => {
   return (
-    
     <Card
       sx={{
         width: 1500,
@@ -15,7 +65,6 @@ const ProblemList = ({ problems }) => {
         backgroundColor: "#F3DDD1",
         borderRadius: 0,
         border: "3px solid #472F05",
-        //position: 'relative',
       }}
     >
       {problems.map((problem) => (
@@ -33,7 +82,9 @@ const ProblemList = ({ problems }) => {
             <p>Stake amount {problem.stake}</p>
           </Link>
           <button>Delete</button>
-          <button>Unsolve</button>
+          <Link to={`/problems/submit/${problem.id}`}>
+            <button>Submit</button>
+          </Link>
         </CardContent>
       ))}
     </Card>
