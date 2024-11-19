@@ -1,7 +1,7 @@
-const hre = require("hardhat");
+import { ethers } from "hardhat";
 
 async function main() {
-  const Admin = await hre.ethers.getContractFactory("Admin");
+  const Admin = await ethers.getContractFactory("Admin");
 
   console.log("Deploying Admin contract...");
   const admin = await Admin.deploy();

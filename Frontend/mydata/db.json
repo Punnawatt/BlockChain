@@ -47,6 +47,31 @@
         }
       ],
       "id": "2"
+    },
+    {
+      "id": "e15a",
+      "problemName": "boat222222",
+      "detail": "olllllllllllllllllllloooooooooooooooollllllllllllllllllooooooooooooooooolllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
+      "stake": "0.1",
+      "testcases": [
+        {
+          "input": "1",
+          "output": "1"
+        },
+        {
+          "input": "2",
+          "output": "2"
+        },
+        {
+          "input": "3",
+          "output": "3"
+        },
+        {
+          "input": "4",
+          "output": "4"
+        }
+      ],
+      "walletAddress": "0x5fbce2070821544e6e828f4b4bb85d9f6bc25c59"
     }
   ]
 }
