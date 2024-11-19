@@ -78,9 +78,18 @@ export default function SubmitCode() {
     }
   }, []);
 
+  // const submitCode = () => {
+  //   alert('Sent Code Implement On blockchain');
+  // };
   const submitCode = () => {
-    alert('Sent Code Implement On blockchain');
-  };
+  if (editorViewRef.current) {
+    const code = editorViewRef.current.state.doc.toString(); // Retrieve the code from the editor
+    alert(`Submitted Code:\n${code}`); // Show the code in an alert
+  } else {
+    alert("Editor is not ready yet.");
+  }
+};
+
 
   const runCode = async () => {
     setOutput("");
@@ -165,14 +174,7 @@ export default function SubmitCode() {
             {output}
           </pre>
         </div>
-        {/* <div className="flex flex-row">
-          <button className="border w-20 my-4 ml-4 bg-green-400 rounded h-10">
-            Approve
-          </button>
-          <button className="border w-20 my-4 ml-4 bg-red-400 rounded h-10">
-            Reject
-          </button>
-        </div> */}
+        
       </div>
     </div>
     </>
