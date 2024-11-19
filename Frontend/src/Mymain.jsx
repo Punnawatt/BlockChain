@@ -57,6 +57,8 @@ import CreateProblem from "./module/CreateProblem/page.jsx";
 import SubmitCode from "./module/SubmitCode/page.jsx";
 import Grader from "./module/Grader/page.jsx";
 import ProblemDetail from "./module/ProblemDetail/page.jsx";
+import GraderHome from "./module/GraderHome/page.jsx";
+import GraderDetail from "./module/GraderDetail/page.jsx";
 import "./index.css";
 
 // Define routes
@@ -74,8 +76,16 @@ const router = createBrowserRouter([
     element: <CreateProblem />,
   },
   {
+    path: "/graderhome",
+    element: <GraderHome/>,
+  },
+  {
     path: "/grader",
     element: <Grader />,
+  },
+  {
+    path: "/graders/:id",
+    element: <GraderDetail/>,
   },
   {
     path: "/problems/:id",
