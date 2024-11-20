@@ -328,7 +328,7 @@ function CreateProblem() {
           alignItems: "center",
         }}
       >
-        <h2>Create Problem</h2>
+        <h2 className="text-4xl font-bold">Create Problem</h2>
         <>
           <Box style={{ marginBottom: "10px" }}>
             <label>Problem Name *</label>
@@ -365,7 +365,7 @@ function CreateProblem() {
             />
           </Box>
 
-          <h3>Add Your Testcase</h3>
+          <h3 className="text-2xl font-bold">Add Your Testcase</h3>
           <AddTestCase onAdd={handleAddTestcase} />
 
           <ul>
@@ -447,7 +447,17 @@ function AddTestCase({ onAdd }) {
           style={{ display: "block", width: "100%", marginBottom: "10px" }}
         />
       </div>
-      <button onClick={handleAdd}>Add</button>
+      <button
+        style={{
+            backgroundColor: '#4CAF50',
+            color: 'white',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '16px',
+        }} 
+        onClick={handleAdd}>Add</button>
     </div>
   );
 }

@@ -72,7 +72,7 @@ const GraderQueue = ({ submissions, connectedWallet }) => {
   return (
     <Card
       sx={{
-        width: 1500,
+        width: 1100,
         height: 100,
         padding: 0,
         flex: 1,
