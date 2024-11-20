@@ -86,7 +86,9 @@ function HomePage() {
           alignItems: "center",
         }}
       >
-        <h1>Problem List</h1>
+        <h1 className="text-4xl font-bold">
+          Problem List
+        </h1>
         {/* {!walletAddress && (
           <button onClick={connectWallet} style={{ marginBottom: "1rem" }}>
             Connect Wallet
