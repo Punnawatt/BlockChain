@@ -252,7 +252,7 @@ export default function SubmitCode() {
   useEffect(() => {
     if (problems && problems.testcases && problems.testcases.length > 1) {
       const totalTestCases = problems.testcases.length;
-      const numberOfTestCasesToSelect = Math.floor(totalTestCases / 1); // Calculate 1/3 of the total test cases
+      const numberOfTestCasesToSelect = Math.floor(totalTestCases / 3); // Calculate 1/3 of the total test cases
 
       // Pick random indices for the 1/3 test cases
       let randomIndices = [];

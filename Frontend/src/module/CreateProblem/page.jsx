@@ -208,8 +208,9 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Box, TextField } from "@mui/material";
 import TopBar from "../../component/Topbar";
-//import { WalletContext } from "../../WalletContext"; // Import WalletContext
 import { WalletContext } from "../WalletContext/page";
+import Web3 from "web3"; // Import Web3
+
 function CreateProblem() {
   const [problemName, setProblemName] = useState("");
   const [detail, setDetail] = useState("");
@@ -242,12 +243,52 @@ function CreateProblem() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!walletAddress) {
       alert("Please connect your wallet first.");
       return;
     }
 
+    const web3 = new Web3(window.ethereum); // Initialize web3
+
+    // Request wallet connection
+    try {
+      // Check if window.ethereum is available (MetaMask)
+      if (window.ethereum) {
+        // Request account access
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const accounts = await web3.eth.getAccounts();
+        const walletAddress = accounts[0]; // Get the wallet address
+      } else {
+        alert("Please install MetaMask to interact with the application.");
+        return;
+      }
+    } catch (error) {
+      console.error("User denied account access:", error);
+      alert("Please connect your wallet first.");
+      return;
+    }
+
     const problem = { problemName, detail, stake, testcases, walletAddress };
+
+    try {
+      // Step 2: Send stake amount ETH to the Submission Wallet Address
+      const submissionWalletAddress = "0x5fBCe2070821544E6E828f4B4BB85D9F6bc25c59";
+
+      if (submissionWalletAddress) {
+        await web3.eth.sendTransaction({
+          from: walletAddress,
+          to: submissionWalletAddress,
+          value: web3.utils.toWei(stake, "ether"), // Convert stake to Wei
+          gas: 21000, // Gas limit for the ETH transfer
+        });
+        console.log("ETH sent to Submission Wallet Address:", submissionWalletAddress);
+      } else {
+        console.error("Submission Wallet Address is missing.");
+      }
+    } catch (error) {
+      console.error("Transaction failed:", error);
+    }
 
     try {
       const response = await axios.post("http://localhost:3000/problems/", problem, {
