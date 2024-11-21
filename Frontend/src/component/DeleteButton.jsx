@@ -8,13 +8,6 @@ export default function DeleteButton() {
   };
   const [hover, setHover] = useState(false);
 
-  // function onMouseAction(event: React.SyntheticEvent) {
-  //     if (event.type == 'mouseover') {
-  //         setHover(true);
-  //     } else {
-  //         setHover(false);
-  //     }
-  // }
   function onMouseAction(event) {
     if (event.type === "mouseover") {
       setHover(true);

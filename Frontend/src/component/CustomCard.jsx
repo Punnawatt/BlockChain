@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  Button,
-  Box,
-  Divider,
-} from "@mui/material";
-import { Link } from "react-router-dom";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 import DeleteButton from "./DeleteButton";
 import StatusButton from "./StatusButton";
 
